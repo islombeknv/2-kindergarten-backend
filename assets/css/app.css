@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+* {
+  font-family: "Titillium Web", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+    background-image: url('https://cdn.img-conv.gamerch.com/img.gamerch.com/miraclenikki/wikidb_img/1561887877001.png');
+    background-attachment:fixed;
+    background-size:contain;
+    background-repeat:  no-repeat;
+    background-position: bottom;
+    background-size: 300px;
+}
+
+a:hover {
+    text-decoration: none;
+    color: darkblue;
+}
+
+.navbar .navbar-brand {
+    font-size: 20px;
+    color: white;
+    font-weight: bolder;
+    font-family: sans-serif;
+    position: relative;
+    top: 4px;
+}
+
+.nav {
+    background-color:#4e0273;
+}
+
+.yellow {
+    color: red;
+}
+
+.navbar .nav-item {
+    padding: 5px 10px;
+}
+
+.navbar .nav-link {
+    font-size: 18px;
+    margin-left: 5px;
+    color: white;
+}
+
+.active1 {
+/*    color: aqua;*/
+    font-weight: 900;
+/*  border-bottom: 3px solid red;*/
+
+}
+
+.bi-list {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    bottom: 2px;
+
+}
+
+.bi-x {
+    color: white;
+    font-size: 30px;
+    position: relative;
+    bottom: 2px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.cotxt {
+    font-family: cursive;
+    color: snow;
+    font-size: 20px;
+}
+
+.test {
+    box-shadow: 0px 1px 10px black;
+/*    border-bottom: 2px solid white;*/
+}
+
+.boxs h3 {
+    font-family: cursive;
+
+}
+.fa-school {
+    color: #4467e8;
+    background-color: #ebebeb;
+    padding: 23px 20px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+}
+
+.fa-user-graduate {
+    font-size: 220%;
+    color: #4467e8;
+    background-color: #ebebeb;
+    padding: 19px 24px;
+    border-radius: 50px;
+    margin-bottom: 3px;
+}
+
+.fa-award {
+    font-size: 140%;
+    color: #4467e8;
+    background-color: #ebebeb;
+    padding: 18px 25px;
+    border-radius: 50px;
+    margin-bottom: 5px;
+}
+
+.fa-graduation-cap {
+    font-size: 110%;
+    color: #4467e8;
+    background-color: #ebebeb;
+    padding: 20px 19px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+}
+
+.fa-angle-double-down {
+    font-size: 25px;
+    color: cadetblue;
+}
+.gall {
+    font-size: 26px;
+}
+
+.boxs {
+    padding: 3% 0%;
+}
+
+.kop {
+    padding: 3px 5px;
+    padding-left: 7px;
+    color: mediumblue;
+    font-weight:100;
+    font-family: sans-serif;
+    border-bottom: 1px solid blue;
+}
+
+.kop:hover {
+    background-color: white;
+    color: darkblue;
+    border: 2px solid red;
+    text-decoration: none;
+}
+
+/*conatact*/
+input, textarea {
+    border: none;
+    outline: none;
+    padding: 15px;
+    margin-bottom: 5px;
+    width: 100%;
+    font-size: 16px;
+    background-color: #e6e6e6;
+}
+
+textarea {
+    height: 12em;
+}
+
+.form-grou {
+    border: 1px solid gray;
+    margin: 10px 0px;
+    padding: 5px;
+    background-color: #e6e6e6;
+/*    border-radius: 10px;*/
+    border: none;
+}
+
+
+.btn {
+    width: 100%;
+    margin-bottom: 50px;
+    background-color: #008CBA;
+    height: 10%;
+    border: none;
+/*    font-weight: 500;*/
+}
+
+.btnsize {
+    font-size: 18px;
+    font-family: sans-serif;
+    color: white;
+}
+
+.btnf {
+    background-color: #A44DD8;
+    width: 100%;
+    padding: 0.7em 0;
+    border: 0;
+    margin-bottom: 55px;
+}
+.textg {
+    font-family: 'Poppins', sans-serif;
+    padding-bottom: 10px;
+}
+
+.collig {
+    color: gray;
+    font-family: sans-serif;
+}
+
+.bi-house, .bi-telephone, .bi-envelope {
+    position: relative;
+    bottom: 1px;
+    margin-right: 5px;
+}
+
+.manz {
+      font-family: 'Poppins', sans-serif;
+}
+
+
+
+.footer {
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+
+/* @media querries */
+
+@media only screen and (max-width: 1266px) {
+	.section2 {
+		width: 100%;
+	}
+}
+@media only screen and (max-width: 960px) {
+	.container2 {
+    padding: 0 20px 0px;
+	}
+	.section2 .col2 {
+		width: 100%;
+		display: block;
+	}
+	.section2 .col2.first {
+		margin-bottom: 10px;
+	}
+	.section2 .col2.column2 {
+		padding: 0;
+	}
+	body .sec2map {
+		height: 250px !important;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+	.section1 h1 {
+		font-size: 28px;
+	}
+}
+

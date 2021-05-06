@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+{{ object.title }}
+{% endblock %}
+{% block content %}
+    <div class="container mt-3">
+        <div class="row mt-5 pt-3">
+            <div class="col-md-6 col-lg-4 col-xl-6 mb-4">
+                <img src="{{ object.image.url }}" style="width: 100%;">
+            </div>
+            <div class="col-md-6 col-lg-4 col-xl-6">
+                <p class="card-text"><small class="text-muted"><i class="bi bi-calendar4-event"> </i>
+                    {{ object.created_at|date:'H:i / d.m.Y' }}</small></p>
+                <hr>
+                <h3 class="mb-4">{{ object.title }}</h3>
+                <p>
+                    <em>{{ object.description }}</em>
+                </p>
+            </div>
+            <div class="col-sm-12">
+                <p>
+                    {{ object.content|safe }}
+                </p>
+            </div>
+        </div>
+        <p id="contact"></p>
+    </div>
+{% endblock %}

@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load cropping %}
+{% block title %}
+Jamoa
+{% endblock %}
+{% block content %}
+        <!--team-->
+    <section id="team" class="pb-5">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center titles mb-3 mt-5"
+                     style="font-size: 33px; color: #A44DD8">
+                    <h3>Bizning jamoa</h3>
+                    <i class="bi bi-chevron-compact-down"></i>
+                </div>
+                <div class="col-12 card-group">
+                    <div class="owl-carousel owl-theme">
+                        {% for staff in object_list %}
+                            <div class="item">
+                                <div class="card">
+                                    <img class="card-img-top" src="{% cropped_thumbnail staff "cropping" scale=1 %}">
+                                    <div class="card-body text-center">
+                                        <h5 class="card-title" style="font-weight: bold;">{{ staff.name }}</h5>
+                                        <p class="card-text">{{ staff.position }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% block extra_js %}
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+
+    </script>
+{% endblock %}

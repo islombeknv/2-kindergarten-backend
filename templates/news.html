@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load cropping %}
+{% block title %}
+    Yangiliklar
+{% endblock %}
+{% block extra_css %}
+    <style>
+
+        .a {
+            color: black;
+        }
+
+        .a:hover {
+            text-decoration: none;
+            color: #4467e8;
+        }
+
+    </style>
+{% endblock %}
+
+
+{% block content %}
+    <!--news-->
+
+    <div class="container mt-5">
+        <div class="row">
+            <hr>
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+                <h4 class="titles" style="font-size: 26px; color: #A44DD8">Yangiliklar
+                    <br>
+                    <i class="bi bi-chevron-compact-down"></i>
+                </h4>
+            </div>
+        </div>
+    </div>
+
+    <main role="main">
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+
+                <div class="row">
+                    {% for news in object_list %}
+                        <div class="col-md-4">
+                            <div class="card mb-4 shadow-sm">
+                                <img src="{% cropped_thumbnail news "cropping" scale=1 %}" class="w-100">
+                                <div class="card-body">
+                                    <i class="bi bi-calendar4-event"
+                                       style="position: relative; bottom: 4px; right: 3px; display: inline">
+                                    </i>
+                                    <p class="d-inline">{{ news.created_at|date:'H:i / d.m.Y' }}</p><br><br>
+                                    <a class="a" href="{% url 'yangiliklar-r' pk=news.pk %}"><h5 class="card-text text">
+                                        <b>{{ news.title|safe }}</b></h5></a>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </main>
+{% endblock %}
